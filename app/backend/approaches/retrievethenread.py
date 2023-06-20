@@ -10,7 +10,7 @@ from text import nonewlines
 class RetrieveThenReadApproach(Approach):
 
     template = \
-"You are an intelligent assistant helping Contoso Inc employees with their healthcare plan questions and employee handbook questions. " + \
+"You are an intelligent assistant helping company employees and users with their SEC 10 K questions. " + \
 "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
 "Answer the following question using only the data provided in the sources below. " + \
 "For tabular information return it as an html table. Do not return markdown format. "  + \
@@ -19,16 +19,14 @@ class RetrieveThenReadApproach(Approach):
 """
 
 ###
-Question: 'What is the deductible for the employee plan for a visit to Overlake in Bellevue?'
+Question: 'What was the operating margin of UPS?'
 
 Sources:
-info1.txt: deductibles depend on whether you are in-network or out-of-network. In-network deductibles are $500 for employee and $1000 for family. Out-of-network deductibles are $1000 for employee and $2000 for family.
-info2.pdf: Overlake is in-network for the employee plan.
-info3.pdf: Overlake is the name of the area that includes a park and ride near Bellevue.
-info4.pdf: In-network institutions include Overlake, Swedish and others in the region
+info1.pdf: For the first time in our 115-year history, UPS generated more than $100 billion in consolidated revenue. Additionally, our consolidated adjusted* operating margin reached 13.8%, the highest in 15 years, and adjusted* return on invested capital was 31.3%, up 50 basis points from 2021.
+info2.pdf: We expect these costs to decline in 2023 as the acquirer of UPS Freight continues to exit these arrangements. Operating Profit and Margin As a result of the factors described above, total operating profit increased $43 million, with operating margin increasing 90 basis points to 10.8%.
 
 Answer:
-In-network deductibles are $500 for employee and $1000 for family [info1.txt] and Overlake is in-network for the employee plan [info2.pdf][info4.pdf].
+The operating margin of UPS increased to 10.8% from 10.0% in 2021 [info2.pdf]. The consolidated adjusted operating margin reached 13.8%, the highest in 15 years, and the adjusted return on invested capital was 31.3%, up 50 basis points from 2021 [info1.pdf].
 
 ###
 Question: '{q}'?

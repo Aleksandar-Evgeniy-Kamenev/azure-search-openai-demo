@@ -29,7 +29,7 @@
 }
 
 .chatEmptyStateTitle {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 30px;
@@ -38,6 +38,8 @@
 .chatEmptyStateSubtitle {
     font-weight: 600;
     margin-bottom: 10px;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 @media only screen and (max-height: 780px) {

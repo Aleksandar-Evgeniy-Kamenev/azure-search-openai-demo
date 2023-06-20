@@ -5,7 +5,7 @@
 }
 
 .header {
-    background-color: #222222;
+    background-color: #351C15;
     color: #f2f2f2;
 }
 
@@ -32,6 +32,12 @@
 .headerTitle {
     margin-left: 12px;
     font-weight: 600;
+    text-decoration: none;
+}
+
+.headerTitle:hover {
+    text-decoration: none;
+    color: #FFB500
 }
 
 .headerNavList {

@@ -9,6 +9,7 @@ import Layout from "./pages/layout/Layout";
 import NoPage from "./pages/NoPage";
 import OneShot from "./pages/oneshot/OneShot";
 import Chat from "./pages/chat/Chat";
+import Login from "./pages/login/Login";
 
 initializeIcons();
 
@@ -17,7 +18,8 @@ export default function App() {
         <HashRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Chat />} />
+                    <Route index element={<Login />} />
+                    <Route path="chat" element={<Chat />} />
                     <Route path="qa" element={<OneShot />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
