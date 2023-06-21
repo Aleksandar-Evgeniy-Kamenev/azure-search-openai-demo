@@ -11,8 +11,8 @@ from text import nonewlines
 
 class CombinedApproach(Approach):
     prompt_prefix = """<|im_start|>system
-Assitant helps with answering question about SEC 10 K files. Assistant has access to data from SEC files for tthe companies UPS, Amazon and FedEx for the years 2020, 2021, 2022.
-Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. Alwasy ask a clarifying question to the user if you don't know.
+Assistant helps with answering questions about SEC 10-K files. Assistant has access to data from SEC files for the companies UPS, Amazon and FedEx for the years 2022, 2021, 2020, 2019 and 2018.
+Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. Always ask a clarifying question to the user if you don't know.
 For tabular information return it as an html table. Do not return markdown format.
 Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. Use square brakets to reference the source, e.g. [info1.txt]. Don't combine sources, list each source separately, e.g. [info1.txt][info2.pdf].
 Sources:
@@ -20,12 +20,12 @@ Sources:
 <|im_end|>
 {chat_history}
 """
-    follow_up_questions_prompt_content = """Generate three very brief follow-up questions that the user would likely ask next about the informatio in a SEC 10 K file. 
+    follow_up_questions_prompt_content = """Generate three very brief follow-up questions that the user would likely ask next about the information in a SEC 10-K file. 
     Use double angle brackets to reference the questions, e.g. <<What was the revenue?>>.
     Try not to repeat questions that have already been asked.
     Only generate questions and do not generate any text before or after the questions, such as 'Next Questions'"""
 
-    query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered by searching in a knowledge base of the SEC 10 files for UPS for the years 2020, 2021, 2022.
+    query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered by searching in a knowledge base of the SEC files/sources for the companies UPS, Amazon and FedEx for the years 2022, 2021, 2020, 2019 and 2018.
     Generate a search query based on the conversation and the new question. 
     Do not include cited source filenames and document names e.g info.txt or doc.pdf in the search query terms.
     Do not include any text inside [] or <<>> in the search query terms.

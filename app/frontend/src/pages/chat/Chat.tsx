@@ -144,16 +144,16 @@ const Chat = () => {
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
                             {/* <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" /> */}
-                            <img
+                            {/* <img
                                 src="resources/logo.png"
                                 alt="Chat logo"
-                                style={{ fontSize: "120px", fill: "rgba(115, 118, 225, 1)" }}
+                                style={{ fontSize: "60px", fill: "rgba(115, 118, 225, 1)" }}
                                 aria-hidden="true"
                                 aria-label="Chat logo"
-                            />
-                            <h1 className={styles.chatEmptyStateTitle}>Chat with the SEC 10 K Assistant</h1>
+                            /> */}
+                            <h1 className={styles.chatEmptyStateTitle}>Chat with the SEC 10-K Assistant</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>
-                                I have access to SEC 10 K files for 2020, 2021 and 2022,
+                                I have access to SEC 10-K files for the companies UPS, Amazon and FedEx for the years 2018 through 2022,
                                 <br /> I can answer questions related to those files.
                             </h2>
                             <ExampleList onExampleClicked={onExampleClicked} />
@@ -200,7 +200,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Type a new question (e.g. What is the summary of the risk section for 2022?)"
+                            placeholder="Type a new question (e.g. What is the summary of the risk section for 2022 in the Amazon SEC 10-K filling?)"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />

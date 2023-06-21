@@ -10,7 +10,7 @@ from text import nonewlines
 class RetrieveThenReadApproach(Approach):
 
     template = \
-"You are an intelligent assistant helping company employees and users with their SEC 10 K questions. " + \
+"You are an intelligent assistant helping users with their questions about SEC 10-K files for the companies UPS, Amazon and FedEx for the years 2022, 2021, 2020, 2019 and 2018. " + \
 "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
 "Answer the following question using only the data provided in the sources below. " + \
 "For tabular information return it as an html table. Do not return markdown format. "  + \

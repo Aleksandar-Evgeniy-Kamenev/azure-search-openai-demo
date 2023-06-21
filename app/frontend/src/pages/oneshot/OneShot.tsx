@@ -132,11 +132,11 @@ const OneShot = () => {
     return (
         <div className={styles.oneshotContainer}>
             <div className={styles.oneshotTopSection}>
-                {/* <SettingsButton className={styles.settingsButton} onClick={() => setIsConfigPanelOpen(!isConfigPanelOpen)} /> */}
+                <SettingsButton className={styles.settingsButton} onClick={() => setIsConfigPanelOpen(!isConfigPanelOpen)} />
                 <h1 className={styles.oneshotTitle}>Ask a question</h1>
                 <div className={styles.oneshotQuestionInput}>
                     <QuestionInput
-                        placeholder="Example: What is the summary of the risk section for 2022?"
+                        placeholder="Example: What is the summary of the risk section for UPS for 2022?"
                         disabled={isLoading}
                         onSend={question => makeApiRequest(question)}
                     />

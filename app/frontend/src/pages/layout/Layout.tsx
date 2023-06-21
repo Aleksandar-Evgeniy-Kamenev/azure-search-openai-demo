@@ -15,10 +15,10 @@ const Layout = () => {
                         style={{ height: 60, margin: 12 }}
                     />
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | SEC 10 K</h3>
+                        <h3 className={styles.headerTitle}>GPT + Enterprise data | SEC 10-K files</h3>
                     </Link>
                     <NavLink to="/qa" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                        Ask a question
+                        <h5 className={styles.headerTitle}>Ask a question</h5>
                     </NavLink>
                     <nav>
                         {/* <ul className={styles.headerNavList}>

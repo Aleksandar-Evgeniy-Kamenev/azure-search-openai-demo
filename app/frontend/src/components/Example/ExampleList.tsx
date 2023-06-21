@@ -9,10 +9,10 @@ export type ExampleModel = {
 
 const EXAMPLES: ExampleModel[] = [
     {
-        text: "What is the risk sumary?",
-        value: "What is the risk sumary?"
+        text: "Compare the risk factors sections of the 2021 SEC 10-K for UPS and 2021 SEC 10-K for FedEx.",
+        value: "Compare the Risk Factors sections of the 2021 SEC 10-K for UPS and 2021 SEC 10-K for FedEx."
     },
-    { text: "Are there any new acquisitions?", value: "Are there any new acquisitions?" },
+    { text: "Are there any new acquisitions made by Amazon in 2020?", value: "Are there any new acquisitions made by Amazon in 2020?" },
 ];
 
 interface Props {
